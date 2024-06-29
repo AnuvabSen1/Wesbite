@@ -108,7 +108,7 @@
 
            .profile {
                background: none; /* Set background to none to inherit website background */
-               padding: 20px;
+               padding: 14px;
                margin-top: 20px;
                border-radius: 8px;
                box-shadow: none; /* Remove box shadow */
@@ -205,28 +205,148 @@
              font-weight: bold;
           }
 
-
-          /* Adjustments for publication items */
-        .publication-item {
-           border: 1px solid rgba(0, 0, 0, 0.1); /* Transparent border with reduced opacity */
-           padding: 10px;
-           margin-bottom: 10px;
-           transition: background-color 0.3s, border-color 0.3s;
-        }
-
         /* On hover, change background and border color */
         .publication-item:hover {
            background-color: #f0f0f0;
            border-color: rgba(0, 0, 0, 0.3);
         }
 
-        /* Style for the section title */
-        .section-title {
-           font-size: 28px;
-           font-weight: bold;
-           color: #0F67B1;
-           margin-bottom: 10px;
+
+
+
+
+
+
+
+
+
+        /* Basic styling for publication items */
+        .publication-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd; /* Light border */
+            border-radius: 2px;
+            background-color: #f9f9f9; /* Light background */
         }
+
+        .publication-item p {
+            margin: 0;
+            color: #333; /* Dark text color */
+            font-family: 'Times New Roman', Times, serif; /* Times New Roman font */
+        }
+
+        .download-link {
+            text-decoration: none;
+            color: #0F67B1; /* Blue color for links */
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0F67B1; /* Blue color for section titles */
+            margin-bottom: 20px;
+        }
+
+
+
+
+
+
+        /* Basic styling for work experience items */
+        .profile {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd; /* Light border */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background */
+        }
+
+        .profile h5 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333; /* Dark text color */
+        }
+
+        .profile h6 {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555; /* Lighter text color */
+        }
+
+        .profile p {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #666; /* Medium text color */
+        }
+
+        .profile i.fa {
+            width: 20px;
+        }
+
+        .collapsible {
+            background-color: white;
+            color: rgb(19, 168, 226);
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 25px;
+            font-family: 'Playfair Display', serif; /* Apply classy font */
+            transition: background-color 0.4s,
+        }
+
+        .collapsible:hover {
+            background-color: #eee; /* Lighter background on hover */
+        }
+
+        .collapsible.active {
+            background-color: #ccc; /* Even darker background when active */
+        }
+
+
+
+        /* Basic styling for work experience items */
+        .profile1 {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd; /* Light border */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background */
+        }
+
+        .profile1 h5 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333; /* Dark text color */
+        }
+
+        .profile1 h6 {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #555; /* Lighter text color */
+        }
+
+        .profile1 p {
+            margin-bottom: 5px;
+            font-size: 17px;
+            color: #666; /* Medium text color */
+        }
+
+        .profile1 i.fa {
+            width: 20px;
+        }
+
+
 
 
 
@@ -344,117 +464,122 @@
      I am very active on most socials, particularly E-mail and Twitter. If you are interested in my work, have questions, or want to share anything at all, feel free to reach out!
  </p>
 </div>
-<button class="collapsible"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxsnall w3-text-blue"></i>Work Experience</button>
+
+
+
+<button class="collapsible">
+    <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxsmall w3-text-blue"></i> Work Experience
+</button>
 <div class="content">
     <div class="w3-container w3-card w3-white w3-margin-bottom">
-      <div class = "profile">
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Mitacs Globalink Intern</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - Aug 2023</h6>
-            <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i>Hamilton, Canada</p>
-            <p><i class="fa fa-user fa-fw w3-margin-right"></i>Dr. Chi Tang</p>
-            <p><i class="fa fa-flask fa-fw w3-margin-right"></i>Artificial Neural Networks, Long Term Short Memory, Hyper-paramter Optimization, Smart Grid</p>
+        <div class="profile1">
+            <div class="w3-container">
+              <div class="publication-item">
+                <h5 class="w3-opacity"><b>Mitacs Globalink Research Intern</b></h5>
+                <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - Aug 2023</h6>
+                <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i>Hamilton, Canada</p>
+                <p><i class="fa fa-user fa-fw w3-margin-right"></i>Dr. Chi Tang</p>
+                <p><i class="fa fa-flask fa-fw w3-margin-right"></i>Artificial Neural Networks, Long Term Short Memory, Hyper-parameter Optimization, Smart Grid</p>
+              </div>
+            </div>
+
+            <div class="w3-container">
+                <div class="publication-item">
+                <h5 class="w3-opacity"><b>Machine Learning Intern, Unify AI, UK</b></h5>
+                <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2022 - Jul 2022</h6>
+                <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i>London, UK</p>
+                <p><i class="fa fa-code fa-fw w3-margin-right"></i>Helped in developing a model to enable automatic code conversions between frameworks and developed multi-framework support.</p>
+              </div>
+            </div>
+
+            <div class="w3-container">
+             <div class="publication-item">
+                <h5 class="w3-opacity"><b>Summer Research Intern, Indian Statistical Institute, Kolkata, India</b></h5>
+                <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Sep 2021</h6>
+                <p><i class="fa fa-user fa-fw w3-margin-right"></i>Dr. Subhamoy Maitra </p>
+                <p><i class="fa fa-flask fa-fw w3-margin-right"></i>Quantum Algorithms, Deutsch-Josza Algorithm, Grover's Algorithm, Bernstein-Vazirani Algorithm, Quantum Fourier Transform, and Quantum Phase estimation.</p>
+                <p><i class="fa fa-book fa-fw w3-margin-right"></i>Studied HHL Algorithm, Quantum Phase estimation & Generated MUBs (Mutually Unbiased Bases)</p>
+              </div>
+            </div>
         </div>
-        <hr>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Machine Learning Intern, Unify AI, UK</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2022 - Jul 2022</h6>
-            <p><i class="fa fa-map-marker fa-fw w3-margin-right"></i>London, UK</p>
-            <p><i class="fa fa-code fa-fw w3-margin-right"></i>Helped in developing a model to enable automatic code conversions between frameworks and developed multi-framework support.</p>
-        </div>
-        <hr>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Summer Research Intern, Indian Statistical Institute, Kolkata, India</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2021 - Sep 2021</h6>
-            <p><i class="fa fa-user fa-fw w3-margin-right"></i>Dr. S. Maitra </p>
-            <p><i class="fa fa-flask fa-fw w3-margin-right"></i> Quantum Algorithms, Deutsch-Josza Algorithm, Grover's Algorithm, Bernstein-Vazirani Algorithm, Quantum Fourier Transform, and Quantum Phase estimation. </p>
-            <p><i class="fa fa-book fa-fw w3-margin-right"></i> Studied HHL Algorithm, Quantum Phase estimation & Generated MUBs (Mutually Unbiased Bases) </p>
-            <br>
-        </div>
-      </div>
     </div>
 </div>
+
 
 
                <button class="collapsible"><i class="fa fa-envelope fa-fw w3-margin-right w3-xxsmall w3-text-blue"></i> Latest News </button>
                <div class="content">
                  <div class="w3-container w3-card w3-white" id="publications" style="scroll-margin-top: 100px;">
                     <div class="w3-container">
-                      <div class = "profile">
+                      <div class = "profile1">
+                        <div class = "publication-item">
                        <p>[Aug. 2024] I started my PhD at Georgia Institute of Technology, Atanta, USA!</p>
-                       <p>[July 2024] I completed my graduation at Indian Institute of Engineering Science and Technology India!</p>
+                       <p>[July 2024] I completed my graduation at IIEST Shibpur, India!</p>
                        <p>[Jan 2024] My undergrad thesis got accepted as a workshop paper at IGARSS, Athens, Greece!</p>
-                       <br>
+                     </div>
                      </div>
                     </div>
                 </div>
                </div>
 
                <button class="collapsible">
-                  <i class="fa fa-file fa-fw w3-margin-right w3-xxsmall w3-text-blue"></i> CV
+                   <i class="fa fa-file fa-fw w3-margin-right w3-xxsmall w3-text-blue"></i> CV
                </button>
                <div class="content">
-                  <div class="w3-container w3-card w3-white" id="publications" style="scroll-margin-top: 100px;">
-                     <div class="profile">
-                        <h2 class="section-title">Conference Publications</h2>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., Chatterjee, M., & Roy, S.</strong></p>
-                           <p>ExoSpikeNet: A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, Comm. Systems and Network Technologies Conf [CSNT], 802-807</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Sai, S., Sen, A., Mallick, C., Mallik, A., Roy, S.</strong></p>
-                           <p>QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., Sai, S., Mallick, C., Roy, S.</strong></p>
-                           <p>HBO-DEViT: Vision Transformer Based Attention-Guided Evolutionary Architecture for Ship-Iceberg Categorisation in Arctic SAR Images, IEEE International Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., Sutradhar, A., Paul, M., Sai, S., Mallik, A., Mallick, C.</strong></p>
-                           <p>QGAPHEnsemble: Combining Hybrid QLSTM Network Ensemble via Adaptive Weighting for Short Term Weather Forecasting, IEEE World Congress on Computational Intelligence [CEC], 2024</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., Mazumder, A. R., & Sen, U.</strong></p>
-                           <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Transformer Neural Network Model for Load Forecasting, Symposium Series on Computational Intelligence [SSCI], 234-239</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., Sen, U., & Roy, S.</strong></p>
-                           <p>A Comparative Analysis on Metaheuristic Algorithms Based Vision Transformer Model for Early Detection of Alzheimer’s Disease, Computational Intelligence and Communication Networks [CICN], 200-205</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., Ghosh, A., Sarayloo, Z., Dhar, S., Jana, N., & Banerjee, A.</strong></p>
-                           <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Convolutional Neural Network for Speech Command Recognition, Computational Intelligence - ECTA, Vol 1</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., & Roy, S.</strong></p>
-                           <p>DEM-ViT: State-of-the-art Vision Transformer Model for Early Detection of Alzheimer’s Disease, National Conference on Communications [NCC], 1-6</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                     </div>
+                   <div class="w3-container w3-card w3-white" id="publications" style="scroll-margin-top: 100px;">
+                       <div class="profile1">
+                           <h2 class="section-title">Conference Publications</h2>
+                           <div class="publication-item">
+                               <p>ExoSpikeNet: A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, Comm. Systems and Network Technologies Conf [CSNT], 802-807</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>HBO-DEViT: Vision Transformer Based Attention-Guided Evolutionary Architecture for Ship-Iceberg Categorisation in Arctic SAR Images, IEEE International Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>QGAPHEnsemble: Combining Hybrid QLSTM Network Ensemble via Adaptive Weighting for Short Term Weather Forecasting, IEEE World Congress on Computational Intelligence [CEC], 2024</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Transformer Neural Network Model for Load Forecasting, Symposium Series on Computational Intelligence [SSCI], 234-239</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>A Comparative Analysis on Metaheuristic Algorithms Based Vision Transformer Model for Early Detection of Alzheimer’s Disease, Computational Intelligence and Communication Networks [CICN], 200-205</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Convolutional Neural Network for Speech Command Recognition, Computational Intelligence - ECTA, Vol 1</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>DEM-ViT: State-of-the-art Vision Transformer Model for Early Detection of Alzheimer’s Disease, National Conference on Communications [NCC], 1-6</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                       </div>
 
-                     <div class="profile">
-                        <h2 class="section-title">Journal Papers</h2>
-                        <div class="publication-item box">
-                           <p><strong>Sen, A., Mazumdar, A., Sen, U., Dutta, D., & Syam, P.</strong></p>
-                           <p>Comparative Evaluation of Evolutionary Metaheuristic Algorithms for Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <div class="publication-item box">
-                           <p><strong>Mazumdar, A., Sen, A., & Sen, U.</strong></p>
-                           <p>Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm against Quantum Annealing, 11th CSAI Conference, London, Quantum Information Processing [QIP]</p>
-                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
-                        </div>
-                        <!-- Include other journal papers similarly -->
-                     </div>
-                  </div>
+                       <div class="profile1">
+                           <h2 class="section-title">Journal Papers</h2>
+                           <div class="publication-item">
+                               <p>Comparative Evaluation of Evolutionary Metaheuristic Algorithms for Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <div class="publication-item">
+                               <p>Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm against Quantum Annealing, 11th CSAI Conference, London, Quantum Information Processing [QIP]</p>
+                               <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
+                           </div>
+                           <!-- Add similar styling for other journal papers -->
+                       </div>
+                   </div>
                </div>
+
+
+
 
 
 
@@ -465,7 +590,6 @@
                      </div>
                   </div>
                </div>
-               <!-- twitter  <a class="twitter-timeline" href="https://twitter.com/Vedant_Bahel?ref_src=twsrc%5Etfw">Tweets by Vedant_Bahel</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
             </div>
             <!-- End Right Column -->
          </div>
@@ -475,6 +599,11 @@
       <footer class="w3-container w3-blue w3-center w3-margin-top">
          <p>Copyright © Anuvab Sen 2024<br>If you would like to know more about my work, then drop me an email at <a href="">asen74@gatech.edu</a></p>
       </footer>
+
+      <div class="publication-item">
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Banff National Park , Alberta<br>Summer 2023 💜 <a href="https://t.co/E1utfOMijA">pic.twitter.com/E1utfOMijA</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1774844353078513684?ref_src=twsrc%5Etfw">April 1, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
       <script>
          var coll = document.getElementsByClassName("collapsible");
          var i;
