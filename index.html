@@ -180,6 +180,57 @@
           object-fit: cover; /* Cover the entire container */
           }
 
+
+
+
+          .box {
+             border: 1px solid #ddd;
+             padding: 10px;
+             margin-bottom: 10px;
+             border-radius: 5px;
+             transition: all 0.3s ease; /* Smooth transition for hover effect */
+          }
+
+          .box:hover {
+             background-color: #f0f0f0; /* Background color on hover */
+             color: #007bff; /* Blue text color on hover */
+          }
+
+          .section-title:hover {
+             color: #007bff; /* Change to your desired hover color */
+          }
+
+          .publication-item p strong {
+             color: #888;
+             font-weight: bold;
+          }
+
+
+          /* Adjustments for publication items */
+        .publication-item {
+           border: 1px solid rgba(0, 0, 0, 0.1); /* Transparent border with reduced opacity */
+           padding: 10px;
+           margin-bottom: 10px;
+           transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* On hover, change background and border color */
+        .publication-item:hover {
+           background-color: #f0f0f0;
+           border-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style for the section title */
+        .section-title {
+           font-size: 28px;
+           font-weight: bold;
+           color: #0F67B1;
+           margin-bottom: 10px;
+        }
+
+
+
+
         </style>
 
       <style type="text/css">
@@ -339,52 +390,73 @@
                 </div>
                </div>
 
-               <button class="collapsible"> <i class="fa fa-file fa-fw w3-margin-right w3-xxsmall w3-text-blue"></i>CV</button>
+               <button class="collapsible">
+                  <i class="fa fa-file fa-fw w3-margin-right w3-xxsmall w3-text-blue"></i> CV
+               </button>
                <div class="content">
                   <div class="w3-container w3-card w3-white" id="publications" style="scroll-margin-top: 100px;">
-                     <!--<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Publications</h2> -->
-                     <div class="w3-container">
-                       <div class = "profile">
-                         <h3>CONFERENCES</h3>
-                         <p>Sen, A., Chatterjee, M., & Roy, S.</p>
-                         <p>ExoSpikeNet: A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, Comm. Systems and Network Technologies Conf [CSNT], 802-807<br><a href="">[PDF]</a></p>
+                     <div class="profile">
+                        <h2 class="section-title">Conference Publications</h2>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., Chatterjee, M., & Roy, S.</strong></p>
+                           <p>ExoSpikeNet: A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, Comm. Systems and Network Technologies Conf [CSNT], 802-807</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Sai, S., Sen, A., Mallick, C., Mallik, A., Roy, S.</strong></p>
+                           <p>QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., Sai, S., Mallick, C., Roy, S.</strong></p>
+                           <p>HBO-DEViT: Vision Transformer Based Attention-Guided Evolutionary Architecture for Ship-Iceberg Categorisation in Arctic SAR Images, IEEE International Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., Sutradhar, A., Paul, M., Sai, S., Mallik, A., Mallick, C.</strong></p>
+                           <p>QGAPHEnsemble: Combining Hybrid QLSTM Network Ensemble via Adaptive Weighting for Short Term Weather Forecasting, IEEE World Congress on Computational Intelligence [CEC], 2024</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., Mazumder, A. R., & Sen, U.</strong></p>
+                           <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Transformer Neural Network Model for Load Forecasting, Symposium Series on Computational Intelligence [SSCI], 234-239</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., Sen, U., & Roy, S.</strong></p>
+                           <p>A Comparative Analysis on Metaheuristic Algorithms Based Vision Transformer Model for Early Detection of Alzheimer’s Disease, Computational Intelligence and Communication Networks [CICN], 200-205</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., Ghosh, A., Sarayloo, Z., Dhar, S., Jana, N., & Banerjee, A.</strong></p>
+                           <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Convolutional Neural Network for Speech Command Recognition, Computational Intelligence - ECTA, Vol 1</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., & Roy, S.</strong></p>
+                           <p>DEM-ViT: State-of-the-art Vision Transformer Model for Early Detection of Alzheimer’s Disease, National Conference on Communications [NCC], 1-6</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                     </div>
+
+                     <div class="profile">
+                        <h2 class="section-title">Journal Papers</h2>
+                        <div class="publication-item box">
+                           <p><strong>Sen, A., Mazumdar, A., Sen, U., Dutta, D., & Syam, P.</strong></p>
+                           <p>Comparative Evaluation of Evolutionary Metaheuristic Algorithms for Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <div class="publication-item box">
+                           <p><strong>Mazumdar, A., Sen, A., & Sen, U.</strong></p>
+                           <p>Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm against Quantum Annealing, 11th CSAI Conference, London, Quantum Information Processing [QIP]</p>
+                           <p><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></p>
+                        </div>
+                        <!-- Include other journal papers similarly -->
+                     </div>
+                  </div>
+               </div>
 
 
-                         <p>Sai, S., Sen, A., Mallick, C., Mallik, A., Roy, S.</p>
-                         <p>QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, Geoscience and Remote Sensing Symposium [IGARSS 2024].<br><a href="">[PDF]</a></p>
-
-
-                         <p>Sen, A., Sai, S., Mallick, C., Roy, S.</p>
-                         <p>HBO-DEViT: Vision Transformer Based Attention-Guided Evolutionary Architecture for Ship-Iceberg Categorisation in Arctic SAR Images, IEEE International Geoscience and Remote Sensing Symposium [IGARSS 2024].<br><a href="">[PDF]</a></p>
-
-
-                         <p>Sen, A., Sutradhar, A., Paul, M., Sai, S., Mallik, A., Mallick, C.</p>
-                         <p>QGAPHEnsemble: Combining Hybrid QLSTM Network Ensemble via Adaptive Weighting for Short Term Weather Forecasting, IEEE World Congress on Computational Intelligence [CEC], 2024.<br><a href="">[PDF]</a></p>
-
-
-                         <p>Sen, A., Mazumder, A. R., & Sen, U.</p>
-                         <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Transformer Neural Network Model for Load Forecasting, Symposium Series on Computational Intelligence [SSCI], 234-239<br><a href="">[PDF]</a></p>
-
-
-                         <p>Sen, A., Sen, U., & Roy, S.</p>
-                         <p>A Comparative Analysis on Metaheuristic Algorithms Based Vision Transformer Model for Early Detection of Alzheimer’s Disease, Computational Intelligence and Communication Networks [CICN], 200-205<br><a href="">[PDF]</a></p>
-
-
-                         <p>Sen, A., Ghosh, A., Sarayloo, Z., Dhar, S., Jana, N., & Banerjee, A.</p>
-                         <p>Differential Evolution Algorithm based Hyper-Parameters Selection of Convolutional Neural Network for Speech Command Recognition, Computational Intelligence - ECTA, Vol 1<br><a href="">[PDF]</a></p>
-
-
-                         <p>Sen, A., & Roy, S.</p>
-                         <p>DEM-ViT: State-of-the-art Vision Transformer Model for Early Detection of Alzheimer’s Disease , National Conference on Communications [NCC], 1-6<br><a href="">[PDF]</a></p>
-                         <hr>
-
-                         <h3>JOURNALS</h3>
-                         <p>Sen, A., Mazumdar, A., Sen, U., Dutta, D., & Syam, P.</p>
-                         <p>Comparative Evaluation of Evolutionary Metaheuristic Algorithms for Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence.<br><a href="">[PDF]</a></p>
-
-
-                         <p>Mazumdar, A., Sen, A., & Sen, U.</p>
-                         <p> Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm against Quantum Annealing, 11th CSAI Conference, London, Quantum Information Processing [QIP]. <br><a href="">[PDF]</a></p>
 
 
 
