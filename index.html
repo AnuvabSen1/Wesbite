@@ -211,20 +211,6 @@
            border-color: rgba(0, 0, 0, 0.3);
         }
 
-        .publication-text {
-            margin: 0; /* Remove default margins */
-            line-height: 1.4; /* Adjust line height for better readability */
-        }
-
-
-
-
-
-
-
-
-
-
         /* Basic styling for publication items */
         .publication-item {
             padding: 15px;
@@ -232,7 +218,14 @@
             border: 1px solid #ddd; /* Light border */
             border-radius: 2px;
             background-color: #f9f9f9; /* Light background */
+            line-height: 1.4; /* Adjust line height for better readability */
+            text-align: justify; /* Align text to justify if needed */
         }
+
+        .publication-item p {
+            margin: 0; /* Remove all margins to avoid gaps */
+        }
+
 
         .publication-item p {
             margin: 0;
@@ -337,7 +330,7 @@
 
         .profile1 h6 {
             margin-top: 5px;
-            font-size: 14px;
+            font-size: 15px;
             color: #555; /* Lighter text color */
         }
 
@@ -348,6 +341,48 @@
         }
 
         .profile1 i.fa {
+            width: 20px;
+        }
+
+
+
+
+
+
+
+
+
+
+        /* Basic styling for work experience items */
+        .profile2 {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd; /* Light border */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background */
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .profile2 h5 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333; /* Dark text color */
+        }
+
+        .profile2 h6 {
+            margin-top: 5px;
+            font-size: 15px;
+            color: #555; /* Lighter text color */
+        }
+
+        .profile2 p {
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: #666; /* Medium text color */
+        }
+
+        .profile2 i.fa {
             width: 20px;
         }
 
@@ -504,7 +539,7 @@
 
                <button class="collapsible"><i class="fa fa-envelope fa-fw w3-margin-right w3-xxsmall w3-text-blue"></i> Latest News </button>
                <div class="content">
-                      <div class = "profile1">
+                      <div class = "profile2">
                        <p>[Aug. 2024] I started my PhD at Georgia Institute of Technology, Atanta, USA!</p>
                        <p>[July 2024] I completed my graduation at IIEST Shibpur, India!</p>
                        <p>[Jan 2024] My undergrad thesis got accepted as a workshop paper at IGARSS, Athens, Greece!</p>
@@ -522,7 +557,7 @@
                            <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
                        </div>
                        <div class="publication-item">
-                           <p class="publication-text">QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
+                           <p class="publication-text">QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, Geoscience and Remote Sensing Symposium [IGARSS 2024]. ysis Based Spiking Neural Network for Exoplanet Detection, Comm. Systems and Network Technologies Conf [CSNT], 802-807</p>
                            <a href="#"><i class="fa fa-download fa-fw w3-margin-right w3-text-blue"></i></a>
                        </div>
                        <div class="publication-item">
@@ -564,7 +599,6 @@
                        <!-- Add more journal papers as needed -->
                    </div>
                </div>
-
 
 
                </div>
