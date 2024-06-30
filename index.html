@@ -395,24 +395,50 @@
 
 
 
+
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
         .tweet-container {
             display: flex;
-            justify-content: space-between; /* Ensure even spacing between tweets */
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .tweet-box {
-            flex: 1; /* Each tweet takes equal space */
-            margin-right: 10px; /* Adjust margin between tweets */
+            flex: 1 1 calc(33.33% - 20px); /* Flex-grow, flex-shrink, flex-basis */
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Semi-transparent border */
+            border-radius: 8px; /* Rounded corners */
             padding: 10px;
-            border: 1px solid rgba(204, 204, 204, 0.5); /* Semi-transparent border */
-            border-radius: 5px;
-            background-color: #f9f9f9; /* Light background for the tweet box */
+            box-sizing: border-box;
+            display: flex;
+            align-items: stretch;
+            background-color: #fff; /* White background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
         }
 
-        /* Remove margin-right for the last tweet-box to avoid extra spacing on the right */
-        .tweet-box:last-child {
-            margin-right: 0;
+        .tweet-box:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
         }
+
+        .tweet-box blockquote {
+            width: 100%;
+            margin: 0; /* Remove default margin */
+        }
+
+        @media (max-width: 600px) {
+            .tweet-box {
+                flex: 1 1 100%; /* Full width on small screens */
+            }
+        }
+
+
 
 
 
@@ -705,15 +731,21 @@
 
 <div class="tweet-container">
     <div class="tweet-box">
-        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Banff National Park , Alberta<br>Summer 2023 💜 <a href="https://t.co/E1utfOMijA">pic.twitter.com/E1utfOMijA</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1774844353078513684?ref_src=twsrc%5Etfw">April 1, 2024</a></blockquote>
+        <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Banff National Park, Alberta<br>Summer 2023 💜 <a href="https://t.co/E1utfOMijA">pic.twitter.com/E1utfOMijA</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1774844353078513684?ref_src=twsrc%5Etfw">April 1, 2024</a>
+        </blockquote>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
-
     <div class="tweet-box">
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Niagara Falls on a Saturday is all I crave for😁 <a href="https://t.co/1vrjdFoxx9">pic.twitter.com/1vrjdFoxx9</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1677805797563088896?ref_src=twsrc%5Etfw">July 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">Niagara Falls on a Saturday is all I crave for😁 <a href="https://t.co/1vrjdFoxx9">pic.twitter.com/1vrjdFoxx9</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1677805797563088896?ref_src=twsrc%5Etfw">July 8, 2023</a>
+        </blockquote>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
 </div>
+
+
+
 
 
 
