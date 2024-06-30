@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
       <style>
            html,
            body,
@@ -392,6 +393,76 @@
 
 
 
+
+
+        .tweet-container {
+            display: flex;
+            justify-content: space-between; /* Ensure even spacing between tweets */
+        }
+
+        .tweet-box {
+            flex: 1; /* Each tweet takes equal space */
+            margin-right: 10px; /* Adjust margin between tweets */
+            padding: 10px;
+            border: 1px solid rgba(204, 204, 204, 0.5); /* Semi-transparent border */
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light background for the tweet box */
+        }
+
+        /* Remove margin-right for the last tweet-box to avoid extra spacing on the right */
+        .tweet-box:last-child {
+            margin-right: 0;
+        }
+
+
+
+
+
+
+
+
+
+        .stylish-headline {
+            font-family: 'Arial', sans-serif;
+            font-size: 2em; /* Adjust font size as needed */
+            font-weight: bold;
+            color: #1da1f2; /* Twitter/X blue color */
+            display: flex;
+            align-items: center;
+        }
+
+        .stylish-headline .fa-x-twitter {
+            margin-left: 10px; /* Space between text and icon */
+            font-size: 1.2em; /* Adjust icon size as needed */
+            color: #1da1f2; /* Same color as text */
+        }
+
+
+
+
+
+
+
+
+        .centered-icon {
+            text-align: center; /* Center align the icon */
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .centered-icon .fa-twitter {
+            font-size: 3em; /* Adjust icon size as needed */
+            color: #1da1f2; /* Optional: Twitter blue color */
+        }
+
+
+
+
+
+
+
+
+
         </style>
 
       <style type="text/css">
@@ -626,9 +697,26 @@
          <p>Copyright © Anuvab Sen 2024<br>If you would like to know more about my work, then drop me an email at <a href="">asen74@gatech.edu</a></p>
       </footer>
 
-      <div class="publication-item">
-        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Banff National Park , Alberta<br>Summer 2023 💜 <a href="https://t.co/E1utfOMijA">pic.twitter.com/E1utfOMijA</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1774844353078513684?ref_src=twsrc%5Etfw">April 1, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
+<br>
+<h2 class="stylish-headline">
+<p class="centered-icon"><i class="fab fa-twitter"></i> CANADA MOMENTS</p>
+
+</h2>
+
+<div class="tweet-container">
+    <div class="tweet-box">
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Banff National Park , Alberta<br>Summer 2023 💜 <a href="https://t.co/E1utfOMijA">pic.twitter.com/E1utfOMijA</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1774844353078513684?ref_src=twsrc%5Etfw">April 1, 2024</a></blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <div class="tweet-box">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Niagara Falls on a Saturday is all I crave for😁 <a href="https://t.co/1vrjdFoxx9">pic.twitter.com/1vrjdFoxx9</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1677805797563088896?ref_src=twsrc%5Etfw">July 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</div>
+
+
+
 
       <script>
          var coll = document.getElementsByClassName("collapsible");
