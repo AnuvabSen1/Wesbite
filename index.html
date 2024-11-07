@@ -2,31 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Anuvab Sen</title> 
+    <title>Anuvab Sen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Anuvab Sen is a United States-based Indian Author whose primary domain of work is in Deep Learning and Multi-Objective Optimization. Sen is a 2xTEDx Speaker and author of multiple books and research articles. Sen received IEEE CIS Tr Award (2023), MITACS GRI Award (2023), and DAAD WISE Scholarship (2023).">
+    <meta name="description" content="Anuvab Sen's portfolio with expertise in AI, Deep Learning, and Optimization.">
     <link rel="icon" href="image/Anuvab_Sen.png" type="image/png">
-    <!-- External CSS and Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-eNLmY14ucj4Xt7jw8l6AAEJl0mKZIRj4hYxDvV6k+L4N5OHzRR8aBl8whD8oB8HX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        body, html {
+        /* General Styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #f9f9f9;
         }
 
-        /* Navigation Bar */
+        body, html {
+            background-color: #f4f5f7;
+            color: #333;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
         .navbar {
-            background-color: #ffffff;
+            background-color: #1a1a1a;
+            color: #fff;
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 999;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 9999;
+            padding: 10px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-container {
@@ -35,57 +43,48 @@
             align-items: center;
             max-width: 1200px;
             margin: auto;
-            padding: 10px 20px;
+            padding: 0 20px;
         }
 
         .navbar-logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #007BFF;
-            text-decoration: none;
+            font-size: 1.6rem;
+            color: #0a74da;
             font-family: 'Montserrat', sans-serif;
-        }
-
-        .navbar-menu {
-            display: flex;
-            align-items: center;
+            font-weight: 700;
         }
 
         .navbar-menu a {
-            margin-left: 20px;
-            font-size: 16px;
-            color: #333;
+            color: #fff;
+            font-size: 1rem;
+            margin: 0 15px;
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s;
         }
 
         .navbar-menu a:hover {
-            color: #007BFF;
+            color: #0a74da;
         }
 
         .navbar-icons a {
+            color: #fff;
             margin-left: 15px;
-            color: #333;
-            font-size: 18px;
+            font-size: 1.2rem;
             transition: color 0.3s;
         }
 
         .navbar-icons a:hover {
-            color: #007BFF;
+            color: #0a74da;
         }
 
         /* Hero Section */
         .hero {
+            background: url('image/AS.jpg') center center/cover no-repeat;
+            color: #fff;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 80vh;
-            background-image: url('image/AS.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-            text-align: center;
-            padding: 0 20px;
             position: relative;
         }
 
@@ -99,538 +98,317 @@
         }
 
         .hero-content {
-            position: relative;
             z-index: 1;
-            max-width: 800px;
+            text-align: center;
+            max-width: 700px;
+            padding: 0 20px;
         }
 
         .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
+            font-size: 3rem;
             font-family: 'Montserrat', sans-serif;
         }
 
         .hero p {
-            font-size: 20px;
-            font-weight: 300;
-            margin-bottom: 30px;
+            font-size: 1.2rem;
+            margin-top: 15px;
         }
 
         .hero .btn {
-            padding: 15px 30px;
-            background-color: #007BFF;
-            color: #ffffff;
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0a74da;
+            color: #fff;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 1rem;
+            font-weight: 500;
             text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background 0.3s;
         }
 
         .hero .btn:hover {
-            background-color: #0056b3;
+            background-color: #084db3;
         }
 
-        /* Main Content */
+        /* Sections */
         .content {
             max-width: 1200px;
             margin: auto;
-            padding: 80px 20px 60px;
+            padding: 100px 20px 60px;
         }
 
         .section {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .section h2 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #007BFF;
-            margin-bottom: 40px;
-            text-align: center;
+            font-size: 2.5rem;
             font-family: 'Montserrat', sans-serif;
+            color: #0a74da;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
-        .about-content, .news-content, .cv-content {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
+        .section-content {
+            text-align: center;
             max-width: 800px;
             margin: auto;
         }
 
-        .about-content p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        /* Work Experience */
+        /* Experience Section */
         .experience-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 30px;
             justify-content: center;
+            text-align: left;
         }
 
         .experience-item {
-            background-color: #ffffff;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            flex: 1 1 calc(45% - 40px);
-            max-width: calc(45% - 40px);
-            position: relative;
+            max-width: 360px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .experience-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         .experience-item h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 1.25rem;
             color: #333;
-            font-family: 'Montserrat', sans-serif;
         }
 
         .experience-item p {
-            margin: 10px 0;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            line-height: 1.6;
+            color: #666;
         }
 
-        .experience-item i {
-            color: #007BFF;
-            margin-right: 10px;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 5px;
-            background-color: #007BFF;
-            border-radius: 0 0 5px 5px;
-        }
-
-        @media (max-width: 768px) {
-            .experience-item {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
-        }
-
-        /* News and Other Roles */
+        /* News and Roles Section */
         .info-section {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            margin-bottom: 60px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 800px;
-            margin: auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .info-section h3 {
-            font-size: 24px;
-            color: #007BFF;
-            margin-bottom: 30px;
+            font-size: 1.25rem;
+            color: #0a74da;
+            margin-bottom: 15px;
             font-family: 'Montserrat', sans-serif;
-            position: relative;
-        }
-
-        .info-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: #007BFF;
-            border-radius: 5px;
         }
 
         .info-section p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        .info-section i {
-            color: #007BFF;
-            margin-right: 10px;
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
         }
 
         /* CV Section */
         .cv-item {
-            background-color: #ffffff;
-            padding: 40px;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .cv-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .cv-item h3 {
-            font-size: 24px;
-            margin-bottom: 25px;
-            color: #333;
+            font-size: 1.25rem;
+            color: #0a74da;
             font-family: 'Montserrat', sans-serif;
-            position: relative;
-        }
-
-        .cv-item h3::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: #007BFF;
-            border-radius: 5px;
+            margin-bottom: 10px;
         }
 
         .cv-item ul {
-            list-style-type: none;
-            padding: 0;
+            list-style: none;
+            padding-left: 0;
         }
 
-        .cv-item li {
-            margin-bottom: 25px;
+        .cv-item ul li {
+            margin-bottom: 10px;
         }
 
-        .cv-item li p {
-            margin: 0 0 10px;
+        .cv-item ul li p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
             line-height: 1.6;
         }
 
-        .cv-item .btn {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        .btn-download {
             display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #0a74da;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .cv-item .btn:hover {
-            background-color: #0056b3;
+        .btn-download:hover {
+            color: #084db3;
+            text-decoration: underline;
         }
 
         /* Tweets Section */
         .tweet-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 40px;
+            gap: 20px;
             justify-content: center;
         }
 
         .tweet-box {
-            flex: 1 1 calc(45% - 40px);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 12px;
-            overflow: hidden;
-            background-color: #ffffff;
-            max-width: calc(45% - 40px);
-            transition: transform 0.3s;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 320px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .tweet-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-        }
-
-        @media (max-width: 768px) {
-            .tweet-box {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer */
         .footer {
             background-color: #333;
-            color: #ffffff;
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-
-        .footer p {
+            color: #fff;
+            padding: 20px;
             text-align: center;
-            margin: 0;
-            font-size: 16px;
         }
 
-        /* Collapsible Sections */
-        .collapsible {
-            background-color: #007BFF;
-            color: #ffffff;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 18px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            font-family: 'Montserrat', sans-serif;
-        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+            }
 
-        .collapsible:hover {
-            background-color: #0056b3;
-        }
-
-        .collapsible:after {
-            content: '\002B';
-            font-size: 13px;
-            color: #ffffff;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .collapsible.active:after {
-            content: "\2212";
-        }
-
-        .collapsible + .content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            background-color: #ffffff;
-            padding: 0 18px;
-            border-radius: 0 0 5px 5px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 2rem;
             }
 
             .hero p {
-                font-size: 16px;
-            }
-
-            .navbar-menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background-color: #ffffff;
-                width: 100%;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-
-            .navbar-menu.active {
-                display: flex;
-            }
-
-            .navbar-menu a {
-                margin: 10px 0;
-                text-align: center;
-            }
-
-            .navbar-toggle {
-                display: block;
-                cursor: pointer;
-                font-size: 24px;
-                color: #333;
-            }
-
-            .navbar-container {
-                padding: 10px 20px;
+                font-size: 1rem;
             }
 
             .content {
-                padding: 60px 20px 40px;
+                padding: 60px 20px;
             }
 
-            .section {
-                margin-bottom: 60px;
+            .experience-container {
+                flex-direction: column;
             }
 
-            .info-section, .cv-item {
-                padding: 30px;
-            }
-        }
-
-        @media (min-width: 601px) {
-            .navbar-toggle {
-                display: none;
+            .info-section, .cv-item, .tweet-box {
+                max-width: 100%;
             }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
+    <!-- Navbar -->
+    <div class="navbar">
         <div class="navbar-container">
             <a href="#" class="navbar-logo">Anuvab Sen</a>
-            <div class="navbar-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="navbar-menu" id="navbarMenu">
-                <a href="#about">About Me</a>
+            <div class="navbar-menu">
+                <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#news">News</a>
                 <a href="#cv">CV</a>
-                <div class="navbar-icons">
-                    <a href="https://github.com/AnuvabSen1"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/anuvabsen/"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:asen74@gatech.edu"><i class="fa fa-envelope"></i></a>
-                </div>
+                <a href="https://github.com/AnuvabSen1"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anuvabsen/"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
-    </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Anuvab Sen</h1>
-            <p>Ph.D. Student at Georgia Institute of Technology, specializing in Artificial Intelligence and Energy-Efficient Design.</p>
+            <p>Ph.D. Student specializing in AI and Energy-Efficient Design</p>
             <a href="#contact" class="btn">Get in Touch</a>
         </div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Content Section -->
     <div class="content">
-        <!-- About Me Section -->
-        <section class="section" id="about">
+        <!-- About Me -->
+        <section id="about" class="section">
             <h2>About Me</h2>
-            <div class="about-content">
-                <p>
-                    I am a first-year PhD student at Georgia Institute of Technology, Atlanta, USA, in the College of Electrical and Computer Engineering. My current research areas of interest are related to artificial intelligence and energy-efficient design, with a focus on applications in smart machines that generate usable information from data. I am particularly interested in building energy-efficient models that operate under tight resource constraints.
-                </p>
-                <p>
-                    I graduated with a B.Tech. in Electronics and Telecommunication from IIEST Shibpur in 2024.
-                </p>
-                <p>
-                    As an undergraduate, I engaged in diverse research experiences and received prestigious awards. I was awarded the Mitacs Globalink Research Scholarship to pursue an internship at McMaster University, where I implemented advanced machine learning models for load forecasting and optimized their performance using cognitive optimization techniques. Additionally, I conducted research at the University of Bremen, focusing on Quantum Machine Learning and Quantum Statistics. Additionally, I have received prestigious IEEE GRSS, IEEE CIS travel grants to present my research work in reputed conferences.
-                </p>
-                <p>
-                    I was advised by Prof. Subhamoy Maitra at the Indian Statistical Institute, where I worked on NMR Quantum Computing and the optimization of quantum algorithms. For my undergraduate thesis at IIEST, I worked closely collaborating with Dr. Subhabrata Roy. I primarily worked on the applications of attention mechanisms and explored areas like Alzheimer's diagnosis using SNNs and explored QMViTs too.
-                </p>
-                <p>
-                    I am very active on most socials, particularly email and Twitter. If you are interested in my work, have questions, or want to share anything at all, feel free to reach out!
-                </p>
+            <div class="section-content">
+                <p>I'm a PhD student at Georgia Tech, exploring AI and energy-efficient design. My work targets smart machines that gather and use data under tight constraints.</p>
+                <p>Previously, I graduated with a B.Tech. from IIEST Shibpur, where I had diverse research experiences and received notable scholarships.</p>
             </div>
         </section>
 
-        <!-- Work Experience Section -->
-        <section class="section" id="experience">
-            <h2>Work Experience</h2>
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <h2>Experience</h2>
             <div class="experience-container">
                 <div class="experience-item">
                     <h3>Mitacs Globalink Research Intern</h3>
-                    <p><i class="fa fa-calendar"></i> May 2023 - Aug 2023</p>
-                    <p><i class="fa fa-map-marker-alt"></i> Hamilton, Canada</p>
-                    <p><i class="fa fa-user"></i> Supervisor: Dr. Chi Tang</p>
-                    <p><i class="fa fa-flask"></i> Artificial Neural Networks, LSTM, Hyper-parameter Optimization, Smart Grid</p>
+                    <p><i class="fa fa-calendar"></i> May - Aug 2023, Hamilton, Canada</p>
+                    <p><i class="fa fa-user"></i> Dr. Chi Tang</p>
+                    <p>Conducted research on Neural Networks, Hyper-parameter Optimization, and Smart Grid at McMaster University.</p>
                 </div>
                 <div class="experience-item">
-                    <h3>Machine Learning Intern, Unify AI, UK</h3>
-                    <p><i class="fa fa-calendar"></i> May 2022 - Jul 2022</p>
-                    <p><i class="fa fa-map-marker-alt"></i> London, UK</p>
-                    <p><i class="fa fa-code"></i> Developed models for automatic code conversions between frameworks and multi-framework support.</p>
-                </div>
-                <div class="experience-item">
-                    <h3>Summer Research Intern, Indian Statistical Institute</h3>
-                    <p><i class="fa fa-calendar"></i> Jul 2021 - Sep 2021</p>
-                    <p><i class="fa fa-map-marker-alt"></i> Kolkata, India</p>
-                    <p><i class="fa fa-user"></i> Supervisor: Dr. Subhamoy Maitra</p>
-                    <p><i class="fa fa-flask"></i> Quantum Algorithms: Deutsch-Josza, Grover's Algorithm, Bernstein Vazirani, Quantum Fourier Transform.</p>
-                    <p><i class="fa fa-book"></i> Studied HHL Algorithm, Quantum Phase Estimation & Generated Mutually Unbiased Bases (MUBs).</p>
+                    <h3>Machine Learning Intern, Unify AI</h3>
+                    <p><i class="fa fa-calendar"></i> May - Jul 2022, London, UK</p>
+                    <p>Developed models for automatic code conversions and multi-framework support.</p>
                 </div>
             </div>
         </section>
 
-        <!-- News Section -->
-        <section class="section" id="news">
+        <!-- News and Roles -->
+        <section id="news" class="section">
             <h2>News</h2>
             <div class="info-section">
-                <h3><i class="fa fa-bullhorn"></i> Latest News</h3>
-                <p><i class="fa fa-newspaper"></i> Selected for <a href="https://sites.google.com/view/researchweek2022" target="_blank">Google Research Week'24</a></p>
+                <h3>Latest News</h3>
+                <p><i class="fa fa-bullhorn"></i> Selected for Google Research Week '24</p>
                 <p><i class="fa fa-award"></i> Recipient of IEEE GRSS Travel Grant</p>
             </div>
-        </section>
-
-        <!-- Other Roles Section -->
-        <section class="section" id="roles">
             <div class="info-section">
-                <h3><i class="fa fa-user-tie"></i> Other Roles</h3>
-                <p><i class="fa fa-users"></i> Member, IEEE, CIS Committee<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<small>January 2024 - Present</small></p>
-                <p><i class="fa fa-chalkboard-teacher"></i> Co-Lead, Google Developer Club<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<small>September 2022 - Feb 2024</small></p>
-                <p><i class="fa fa-user-cog"></i> Chairperson, IEEE CIS IIEST<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<small>January 2020 - December 2020</small></p>
+                <h3>Other Roles</h3>
+                <p>Member, IEEE CIS Committee (Jan 2024 - Present)</p>
+                <p>Co-Lead, Google Developer Club (Sep 2022 - Feb 2024)</p>
             </div>
         </section>
 
-        <!-- CV Section -->
-        <section class="section" id="cv">
+        <!-- CV -->
+        <section id="cv" class="section">
             <h2>Curriculum Vitae</h2>
             <div class="cv-item">
                 <h3>Conference Papers</h3>
                 <ul>
                     <li>
-                        <p><strong>ExoSpikeNet:</strong> A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, Comm. Systems and Network Technologies Conf [CSNT], 802-807</p>
-                        <a href="#" class="btn"><i class="fa fa-download"></i> Download</a>
+                        <p><strong>ExoSpikeNet:</strong> Spiking Neural Network for Exoplanet Detection [CSNT]</p>
+                        <a href="#" class="btn-download"><i class="fa fa-download"></i> Download</a>
                     </li>
-                    <li>
-                        <p><strong>QGAPHnet:</strong> Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, Geoscience and Remote Sensing Symposium [IGARSS 2024]</p>
-                        <a href="#" class="btn"><i class="fa fa-download"></i> Download</a>
-                    </li>
-                    <!-- Add more papers as needed -->
-                </ul>
-            </div>
-            <div class="cv-item">
-                <h3>Journal Papers</h3>
-                <ul>
-                    <li>
-                        <p><strong>Comparative Evaluation of Evolutionary Metaheuristic Algorithms:</strong> For Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence</p>
-                        <a href="#" class="btn"><i class="fa fa-download"></i> Download</a>
-                    </li>
-                    <li>
-                        <p><strong>Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm:</strong> Against Quantum Annealing, 11th CSAI Conference, London, Quantum Information Processing [QIP]</p>
-                        <a href="#" class="btn"><i class="fa fa-download"></i> Download</a>
-                    </li>
-                    <!-- Add more papers as needed -->
                 </ul>
             </div>
         </section>
 
-        <!-- Tweet Section -->
-        <section class="section" id="tweets">
+        <!-- Tweets Section -->
+        <section id="tweets" class="section">
             <h2>Latest Tweets</h2>
             <div class="tweet-container">
                 <div class="tweet-box">
                     <blockquote class="twitter-tweet">
-                        <p lang="en" dir="ltr">Banff National Park, Alberta<br>Summer 2023 💜 <a href="https://t.co/E1utfOMijA">pic.twitter.com/E1utfOMijA</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1774844353078513684?ref_src=twsrc%5Etfw">April 1, 2024</a>
-                    </blockquote>
-                </div>
-                <div class="tweet-box">
-                    <blockquote class="twitter-tweet">
-                        <p lang="en" dir="ltr">Niagara Falls on a Saturday is all I crave for😁 <a href="https://t.co/1vrjdFoxx9">pic.twitter.com/1vrjdFoxx9</a></p>&mdash; Anuvab Sen (@AnuvabSen10) <a href="https://twitter.com/AnuvabSen10/status/1677805797563088896?ref_src=twsrc%5Etfw">July 8, 2023</a>
+                        <p>Banff National Park, Summer 2023 💜</p>
                     </blockquote>
                 </div>
             </div>
@@ -642,48 +420,9 @@
         <p>&copy; 2024 Anuvab Sen. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        function toggleMenu() {
-            const navbarMenu = document.getElementById('navbarMenu');
-            navbarMenu.classList.toggle('active');
-        }
-
-        // Collapsible Sections
-        var collapsibles = document.getElementsByClassName("collapsible");
-        for (var i = 0; i < collapsibles.length; i++) {
-            collapsibles[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight){
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
-
-        // Load Twitter Widgets
-        window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        
-            t._e = [];
-            t.ready = function(f) {
-                t._e.push(f);
-            };
-        
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
-
 </body>
 </html>
+
 
 
 
