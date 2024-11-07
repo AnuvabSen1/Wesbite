@@ -800,6 +800,7 @@
             <!-- Left Column -->
             <div class="w3-third">
                <div class="w3-white w3-text-grey w3-card-4">
+                 <img src="image/AS.jpeg" style="width:100%; height:600px;" alt="VB" loading="lazy">
                  <img src="image/AS.jpg" style="width:100%; height:600px;" alt="VB" loading="lazy">
                   <div class="w3-display-container" id="sec1">
                      <div class="w3-display-bottomleft w3-container w3-text-black">
@@ -999,6 +1000,142 @@
                   </div>
                </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- End Right Column -->
+         </div>
+         <!-- End Grid -->
+      </div>
+      <!-- End Page Container -->
+
+
+<br>
+      <div class="waves1">
+        <footer class="footer">
+          <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+          </div>
+          <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a></li>
+          </ul>
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#">If you would like to know more about my work, then drop me an email at <bold>(asen74@gatech.edu)</bold></a></li>
+          </ul>
+          <p>Copyright © Anuvab Sen 2024 | All Rights Reserved</p>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </div>
+
+
+
+
+
+
+
+      <script>
+         var coll = document.getElementsByClassName("collapsible");
+         var i;
+
+         for (i = 0; i < coll.length; i++) {
+           coll[i].addEventListener("click", function () {
+             this.classList.toggle("active");
+             var content = this.nextElementSibling;
+             if (content.style.maxHeight) {
+               content.style.maxHeight = null;
+             } else {
+               content.style.maxHeight = content.scrollHeight + "px";
+             }
+           });
+         }
+      </script>
+
+
+
+
+
+
+
+<script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+
+    let currentIndex = 0;
+
+    function updateSlider() {
+        slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlider();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlider();
+    });
+</script>
+
+<script src="https://kit.fontawesome.com/63c99c920d.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+      <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
+         <section id="shadow-host-companion"></section>
+      </div>
+      <audio class="audio-output" style="display: none;"></audio>
+      <div id="volume-booster-visusalizer">
+         <div class="sound">
+            <div class="sound-icon"></div>
+            <div class="sound-wave sound-wave_one"></div>
+            <div class="sound-wave sound-wave_two"></div>
+            <div class="sound-wave sound-wave_three"></div>
+         </div>
+         <div class="segments-box">
+            <div data-range="1-20" class="segment"><span></span></div>
+            <div data-range="21-40" class="segment"><span></span></div>
+            <div data-range="41-60" class="segment"><span></span></div>
+            <div data-range="61-80" class="segment"><span></span></div>
+            <div data-range="81-100" class="segment"><span></span></div>
+         </div>
+      </div>
+   </body>
+</html>
 
 
 
