@@ -2,45 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Anuvab Sen - Academic Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Roboto Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  />
+  <title>Anuvab Sen - Academic Portfolio</title>
+  <meta name="description" content="Anuvab Sen is a United States–based Indian Author and researcher in Deep Learning and Multi-Objective Optimization.">
+  <link rel="icon" href="image/Anuvab Sen.png" type="image/png">
+  <!-- Merriweather Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    /* Global Styles */
+    /* CSS Variables for Light and Dark Modes */
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #2980b9;
+      --accent-color: #16a085;
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --card-bg: #f9f9f9;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+      --nav-bg: #2c3e50;
+    }
+    body.dark-mode {
+      --primary-color: #ecf0f1;
+      --secondary-color: #3498db;
+      --accent-color: #1abc9c;
+      --bg-color: #1e272e;
+      --text-color: #d2dae2;
+      --card-bg: #2f3640;
+      --shadow-color: rgba(0, 0, 0, 0.5);
+      --nav-bg: #1e272e;
+    }
+
+    /* Global Reset & Base Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Merriweather', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     a {
       text-decoration: none;
-      color: #2980b9;
+      color: var(--secondary-color);
+      transition: color 0.3s ease;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
+    a:hover {
+      color: var(--accent-color);
+    }
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    /* Simple Nav Bar */
-    nav {
-      width: 100%;
-      background-color: #2c3e50;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: sticky;
+    /* Navigation Bar */
+    .navbar {
+      position: fixed;
       top: 0;
-      z-index: 999;
+      width: 100%;
+      background-color: var(--nav-bg);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 2px 4px var(--shadow-color);
     }
     .navbar-container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 15px 20px;
       display: flex;
@@ -48,374 +79,476 @@
       align-items: center;
     }
     .navbar-logo {
-      font-weight: 500;
-      font-size: 1.5rem;
-      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
     }
     .navbar-menu {
       display: flex;
-      gap: 20px;
+      align-items: center;
     }
     .navbar-menu a {
+      margin-left: 20px;
+      font-size: 16px;
       color: #fff;
-      font-size: 0.95rem;
-      transition: color 0.3s ease;
     }
     .navbar-menu a:hover {
-      color: #16a085;
+      color: var(--accent-color);
+    }
+    .navbar-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .dark-toggle {
+      margin-left: 20px;
+      cursor: pointer;
+      font-size: 20px;
+      background: none;
+      border: none;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: var(--nav-bg);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+      }
+      .navbar-menu.active {
+        display: flex;
+      }
+      .navbar-menu a {
+        margin: 10px 0;
+        text-align: center;
+      }
+      .navbar-toggle {
+        display: block;
+      }
     }
 
     /* Hero Section */
     .hero {
-      height: 50vh;
-      background: 
-        linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
-        url('image/hero-bg.jpg') center/cover no-repeat;
+      position: relative;
+      height: 60vh;
+      background: url('image/hero-bg.jpg') center/cover no-repeat;
       display: flex;
-      justify-content: center;
       align-items: center;
-      text-align: center;
+      justify-content: center;
       color: #fff;
-      padding: 0 20px;
+      text-align: center;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(44, 62, 80, 0.7);
     }
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Section Container */
-    .section-container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .section-heading {
-      font-size: 1.8rem;
-      font-weight: 500;
-      margin-bottom: 20px;
-      color: #2c3e50;
-      border-left: 4px solid #2980b9;
-      padding-left: 10px;
-    }
-
-    /* About Me Section */
-    .about-content {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .hero-content {
+      position: relative;
+      z-index: 1;
       padding: 20px;
-      line-height: 1.6;
     }
-    .about-content p {
-      margin-bottom: 15px;
+    .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .hero-content p {
+      font-size: 1.2em;
     }
 
-    /* Card Layout */
-    .card-list {
+    /* Main Layout (Grid with Sidebar and Main Content) */
+    .container {
+      max-width: 1200px;
+      margin: 100px auto 50px;
+      padding: 0 20px;
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 2fr;
       gap: 20px;
     }
-    @media (min-width: 768px) {
-      .card-list {
-        grid-template-columns: 1fr 1fr;
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
       }
     }
-    .card {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    /* Sidebar */
+    .sidebar {
+      background-color: var(--card-bg);
       padding: 20px;
-      transition: transform 0.2s ease;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px var(--shadow-color);
     }
-    .card:hover {
-      transform: translateY(-3px);
+    .sidebar img {
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 5px;
-      color: #2c3e50;
+    .sidebar h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 5px;
     }
-    .card em {
-      display: block;
-      font-size: 0.85rem;
-      color: #888;
+    .sidebar p {
+      font-size: 0.95em;
       margin-bottom: 10px;
     }
-    .card p {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 10px;
-      line-height: 1.4;
+    .sidebar hr {
+      margin: 15px 0;
+      border: none;
+      border-top: 1px solid var(--shadow-color);
     }
 
-    /* Publications (Group them in a card or separate) */
-    .publications {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Main Content */
+    .main-content {
+      background-color: var(--card-bg);
       padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px var(--shadow-color);
     }
-    .publications h4 {
-      font-size: 1.2rem;
-      color: #2c3e50;
+    .profile {
+      margin-bottom: 30px;
+    }
+    .profile h2 {
+      margin-bottom: 15px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 5px;
+    }
+    .profile p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Collapsible Sections (Accordions) */
+    .collapsible {
+      background-color: transparent;
+      color: var(--primary-color);
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: 1px solid var(--secondary-color);
+      text-align: left;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
       margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .publications ul {
-      margin-left: 20px;
+    .collapsible:hover, .collapsible.active {
+      background-color: var(--secondary-color);
+      color: #fff;
     }
-    .publications li {
-      margin-bottom: 8px;
-      line-height: 1.4;
-      color: #555;
+    .collapsible:after {
+      content: "\002B";
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .collapsible.active:after {
+      content: "\2212";
+    }
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: var(--card-bg);
+      border-radius: 5px;
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+    .content p {
+      padding: 10px 0;
+    }
+
+    /* Image Slider */
+    .slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px var(--shadow-color);
+      margin-bottom: 20px;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+    }
+    .slider img {
+      width: 100%;
+      display: block;
+    }
+    .navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .navigation button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+    }
+    .navigation button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Tweets Section */
+    .tweet-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .tweet-box {
+      border: 1px solid var(--shadow-color);
+      border-radius: 8px;
+      padding: 15px;
+      background-color: var(--card-bg);
+      box-shadow: 0 2px 5px var(--shadow-color);
+    }
+    .tweet-box blockquote {
+      margin: 0;
+      font-style: italic;
+    }
+    .tweet-box cite {
+      display: block;
+      text-align: right;
+      font-size: 0.9em;
+      margin-top: 10px;
     }
 
     /* Contact Section */
     #contact {
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      margin-top: 40px;
+      padding: 40px 20px;
+      background-color: var(--card-bg);
     }
-    .contact-form {
+    .contact_form {
       display: flex;
       flex-direction: column;
       gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .contact-form label {
-      font-weight: 500;
+    .contact_form label {
+      font-weight: bold;
       margin-bottom: 5px;
     }
-    .contact-form input,
-    .contact-form textarea {
+    .contact_form input[type="text"],
+    .contact_form input[type="email"],
+    .contact_form textarea {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
-      font-family: 'Roboto', sans-serif;
     }
-    .contact-form button {
-      width: 150px;
-      padding: 10px;
-      background-color: #2980b9;
+    .contact_form textarea {
+      resize: vertical;
+      height: 150px;
+    }
+    .contact_form button {
+      padding: 10px 20px;
+      background-color: var(--secondary-color);
       color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
     }
-    .contact-form button:hover {
-      background-color: #16a085;
+    .contact_form button:hover {
+      background-color: var(--accent-color);
     }
 
     /* Footer */
-    footer {
-      background-color: #2c3e50;
+    .footer {
+      background-color: var(--primary-color);
       color: #fff;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
-    footer p {
+    .footer p {
       margin: 5px 0;
     }
-    footer a {
+    .footer a {
       color: #fff;
-      text-decoration: underline;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav>
+  <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">Anuvab Sen</div>
-      <div class="navbar-menu">
+      <div class="navbar-toggle" onclick="toggleMenu()">&#9776;</div>
+      <div class="navbar-menu" id="navbarMenu">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#about">About Me</a>
         <a href="#work">Work</a>
-        <a href="#news">News</a>
-        <a href="#roles">Roles</a>
-        <a href="#publications">Publications</a>
+        <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
+        <button class="dark-toggle" onclick="toggleDarkMode()">&#9790;</button>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div>
+    <div class="hero-content">
       <h1>Anuvab Sen</h1>
       <p>Academic Portfolio &amp; Researcher</p>
     </div>
   </section>
 
-  <!-- About Me -->
-  <div class="section-container" id="about">
-    <h2 class="section-heading">About Me</h2>
-    <div class="about-content">
-      <p>
-        I am a first-year PhD student at the Georgia Institute of Technology
-        in the College of Electrical and Computer Engineering. My research
-        focuses on artificial intelligence and energy-efficient design,
-        aiming to build smart models under tight resource constraints.
-      </p>
-      <p>
-        I graduated with a B.Tech in Electronics and Telecommunication from
-        IIEST Shibpur in 2024. Throughout my undergraduate studies, I engaged
-        in diverse research experiences and received prestigious awards
-        including the Mitacs Globalink Research Scholarship, IEEE GRSS, and
-        IEEE CIS travel grants.
-      </p>
-      <p>
-        Under the guidance of Prof. Subhamoy Maitra at the Indian Statistical
-        Institute, I explored NMR Quantum Computing and quantum algorithm
-        optimization, and collaborated with Dr. Subhabrata Roy on attention
-        mechanisms for medical diagnosis and quantum machine learning.
-      </p>
-    </div>
-  </div>
+  <!-- Main Content Area -->
+  <div class="container">
+    <!-- Sidebar (Left Column) -->
+    <aside class="sidebar">
+      <img src="image/AS.jpg" alt="Profile Picture" loading="lazy">
+      <h2>Latest News</h2>
+      <p><strong>Google Research Week '24:</strong> Selected participant</p>
+      <hr>
+      <p><strong>IEEE GRSS Travel Grant:</strong> Award Recipient</p>
+      <hr>
+      <h2>Other Roles</h2>
+      <p><strong>IEEE CIS Committee Member</strong><br>Jan 2024 - Present</p>
+      <hr>
+      <p><strong>Co-Lead, Google Developer Club</strong><br>Sep 2022 - Feb 2024</p>
+      <hr>
+      <p><strong>Chairperson, IEEE CIS IIEST</strong><br>Jan 2020 - Dec 2020</p>
+      <hr>
+      <p><strong>Reviewer, IEEE ICLR Committee</strong><br>Oct 2024 - Present</p>
+    </aside>
 
-  <!-- Work Experience -->
-  <div class="section-container" id="work">
-    <h2 class="section-heading">Work Experience</h2>
-    <div class="card-list">
-      <!-- Card 1 -->
-      <div class="card">
-        <h3>Mitacs Globalink Research Intern</h3>
-        <em>May 2023 - Aug 2023 | Hamilton, Canada</em>
+    <!-- Main Content (Right Column) -->
+    <main class="main-content">
+      <!-- About Me Section -->
+      <div class="profile" id="about">
+        <h2>About Me</h2>
         <p>
-          Developed advanced machine learning models for load forecasting,
-          integrating LSTM networks and cognitive optimization techniques for
-          smart grid applications.
+          I am a first-year PhD student at the Georgia Institute of Technology in the College of Electrical and Computer Engineering. My research focuses on artificial intelligence and energy-efficient design, aiming to build smart models under tight resource constraints.
+        </p>
+        <p>
+          I graduated with a B.Tech in Electronics and Telecommunication from IIEST Shibpur in 2024. Throughout my undergraduate studies, I engaged in diverse research experiences and received prestigious awards including the Mitacs Globalink Research Scholarship, IEEE GRSS, and IEEE CIS travel grants.
+        </p>
+        <p>
+          Under the guidance of Prof. Subhamoy Maitra at the Indian Statistical Institute, I explored NMR Quantum Computing and quantum algorithm optimization, and collaborated with Dr. Subhabrata Roy on attention mechanisms for medical diagnosis and quantum machine learning.
         </p>
       </div>
-      <!-- Card 2 -->
-      <div class="card">
-        <h3>Machine Learning Intern, Unify AI, UK</h3>
-        <em>May 2022 - Jul 2022 | London, UK</em>
-        <p>
-          Assisted in developing an automatic code conversion model between
-          frameworks, enabling multi-framework support.
-        </p>
-      </div>
-      <!-- Card 3 -->
-      <div class="card">
-        <h3>Summer Research Intern, Indian Statistical Institute</h3>
-        <em>Jul 2021 - Sep 2021 | Kolkata, India</em>
-        <p>
-          Conducted research on quantum algorithms including Deutsch-Jozsa,
-          Grover's, and Quantum Fourier Transform; also studied the HHL
-          algorithm and quantum phase estimation.
-        </p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Latest News -->
-  <div class="section-container" id="news">
-    <h2 class="section-heading">Latest News</h2>
-    <div class="card-list">
-      <div class="card">
-        <h3>Google Research Week '24</h3>
-        <em>Selected participant</em>
-        <p>
-          Recently selected to participate in Google Research Week 2024,
-          collaborating with experts on advanced AI topics.
-        </p>
+      <!-- Work Experience Section -->
+      <button class="collapsible"><i class="fa fa-suitcase"></i> Work Experience</button>
+      <div class="content">
+        <div class="profile">
+          <h3>Mitacs Globalink Research Intern</h3>
+          <p><em>May 2023 - Aug 2023 | Hamilton, Canada</em></p>
+          <p>
+            Developed advanced machine learning models for load forecasting, integrating LSTM networks and cognitive optimization techniques for smart grid applications.
+          </p>
+        </div>
+        <div class="profile">
+          <h3>Machine Learning Intern, Unify AI, UK</h3>
+          <p><em>May 2022 - Jul 2022 | London, UK</em></p>
+          <p>
+            Assisted in developing an automatic code conversion model between frameworks, enabling multi-framework support.
+          </p>
+        </div>
+        <div class="profile">
+          <h3>Summer Research Intern, Indian Statistical Institute</h3>
+          <p><em>Jul 2021 - Sep 2021 | Kolkata, India</em></p>
+          <p>
+            Conducted research on quantum algorithms including Deutsch-Jozsa, Grover's, and Quantum Fourier Transform; also studied the HHL algorithm and quantum phase estimation.
+          </p>
+        </div>
       </div>
-      <div class="card">
-        <h3>IEEE GRSS Travel Grant</h3>
-        <em>Award Recipient</em>
-        <p>
-          Received the IEEE GRSS Travel Grant for outstanding research
-          contributions in geoscience and remote sensing applications.
-        </p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Other Roles -->
-  <div class="section-container" id="roles">
-    <h2 class="section-heading">Other Roles</h2>
-    <div class="card-list">
-      <div class="card">
-        <h3>IEEE CIS Committee Member</h3>
-        <em>Jan 2024 - Present</em>
-        <p>
-          Contributing to the IEEE Computational Intelligence Society,
-          organizing conferences and reviewing technical papers.
-        </p>
+      <!-- Latest News Section (Accordion) -->
+      <button class="collapsible"><i class="fa fa-envelope"></i> Latest News</button>
+      <div class="content">
+        <div class="profile">
+          <p><strong>[Aug 2024]</strong> Started my PhD at Georgia Tech, Atlanta, USA.</p>
+          <p><strong>[Jul 2024]</strong> Graduated from IIEST Shibpur, India.</p>
+          <p><strong>[Jan 2024]</strong> Undergraduate thesis accepted as a workshop paper at IGARSS, Athens, Greece.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3>Co-Lead, Google Developer Club</h3>
-        <em>Sep 2022 - Feb 2024</em>
-        <p>
-          Guided a team of developers and enthusiasts in organizing workshops
-          and hackathons, fostering collaborative learning.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Chairperson, IEEE CIS IIEST</h3>
-        <em>Jan 2020 - Dec 2020</em>
-        <p>
-          Led a student branch chapter, hosted events on AI/ML, and mentored
-          undergraduates in research projects.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Reviewer, IEEE ICLR Committee</h3>
-        <em>Oct 2024 - Present</em>
-        <p>
-          Serving as a reviewer for the International Conference on Learning
-          Representations, evaluating cutting-edge deep learning papers.
-        </p>
-      </div>
-    </div>
-  </div>
 
-  <!-- Publications -->
-  <div class="section-container" id="publications">
-    <h2 class="section-heading">Publications</h2>
-    <div class="publications">
-      <h4>Conference Papers</h4>
-      <ul>
-        <li>ExoSpikeNet: A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, CSNT, pp.802-807</li>
-        <li>QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, IGARSS 2024</li>
-        <li>HBO-DEViT: Vision Transformer Based Attention-Guided Evolutionary Architecture for Ship-Iceberg Categorisation, IGARSS 2024</li>
-        <li>QGAPHEnsemble: Adaptive Weighting for Short Term Weather Forecasting, CEC 2024</li>
-        <li>Differential Evolution for Hyper-Parameter Selection of a Transformer for Load Forecasting, SSCI</li>
-        <li>A Comparative Analysis on Metaheuristic Algorithms for Early Detection of Alzheimer’s, CICN</li>
-        <li>Differential Evolution for Hyper-Parameter Selection of a CNN for Speech Command Recognition, ECTA</li>
-        <li>DEM-ViT: Vision Transformer for Early Detection of Alzheimer’s, NCC</li>
-      </ul>
-      <h4>Journal Papers</h4>
-      <ul>
-        <li>Comparative Evaluation of Evolutionary Metaheuristic Algorithms for Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence</li>
-        <li>Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm against Quantum Annealing, 11th CSAI Conference, London, QIP</li>
-      </ul>
-    </div>
+      <!-- CV Section (Accordion) -->
+      <button class="collapsible"><i class="fa fa-file"></i> CV</button>
+      <div class="content" id="cv">
+        <div class="profile">
+          <h2>Conference Papers</h2>
+          <p>ExoSpikeNet: A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, CSNT, pp.802-807</p>
+          <p>QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, IGARSS 2024</p>
+          <p>HBO-DEViT: Vision Transformer Based Attention-Guided Evolutionary Architecture for Ship-Iceberg Categorisation, IGARSS 2024</p>
+          <p>QGAPHEnsemble: Adaptive Weighting for Short Term Weather Forecasting, CEC 2024</p>
+          <p>Differential Evolution for Hyper-Parameter Selection of a Transformer for Load Forecasting, SSCI</p>
+          <p>A Comparative Analysis on Metaheuristic Algorithms for Early Detection of Alzheimer’s, CICN</p>
+          <p>Differential Evolution for Hyper-Parameter Selection of a CNN for Speech Command Recognition, ECTA</p>
+          <p>DEM-ViT: Vision Transformer for Early Detection of Alzheimer’s, NCC</p>
+        </div>
+        <div class="profile">
+          <h2>Journal Papers</h2>
+          <p>Comparative Evaluation of Evolutionary Metaheuristic Algorithms for Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence</p>
+          <p>Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm against Quantum Annealing, 11th CSAI Conference, London, QIP</p>
+        </div>
+      </div>
+
+      <!-- Image Slider Section -->
+      <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="image/1.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="image/iiest.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="image/3.jpg" alt="Slide 3"></div>
+        </div>
+        <div class="navigation">
+          <button id="prev">&#10094;</button>
+          <button id="next">&#10095;</button>
+        </div>
+      </div>
+
+      <!-- Tweets Section -->
+      <div class="tweet-container">
+        <div class="tweet-box">
+          <blockquote>
+            <p>Banff National Park, Alberta. Summer 2023 💜</p>
+            <cite>— Anuvab Sen, April 1, 2024</cite>
+          </blockquote>
+        </div>
+        <div class="tweet-box">
+          <blockquote>
+            <p>Niagara Falls on a Saturday is all I crave for 😁</p>
+            <cite>— Anuvab Sen, July 8, 2023</cite>
+          </blockquote>
+        </div>
+      </div>
+    </main>
   </div>
 
   <!-- Contact Section -->
-  <div class="section-container">
-    <div id="contact">
-      <h2 class="section-heading">Contact Me</h2>
-      <form class="contact-form" method="post" action="#">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" />
+  <section id="contact">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="text-align: center; margin-bottom: 20px;">Contact Me</h2>
+      <form class="contact_form" method="post" action="#">
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 200px;">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div style="flex: 1; min-width: 200px;">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+          </div>
         </div>
         <div>
           <label for="message">Message</label>
@@ -424,19 +557,70 @@
         <button type="submit">Send Message</button>
       </form>
     </div>
-  </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <p>
-      "The most important thing is to enjoy your life – to be happy – it's all that
-      matters." – Audrey Hepburn
-    </p>
-    <p>
-      If you'd like to know more about my work, drop me an email at
-      <a href="mailto:asen74@gatech.edu">asen74@gatech.edu</a>
-    </p>
-    <p>&copy; 2024 Anuvab Sen | All Rights Reserved</p>
+  <footer class="footer">
+    <p>"The most important thing is to enjoy your life – to be happy – it's all that matters." – Audrey Hepburn</p>
+    <p>If you'd like to know more about my work, drop me an email at <a href="mailto:asen74@gatech.edu">asen74@gatech.edu</a></p>
+    <p>&copy; Anuvab Sen 2024 | All Rights Reserved</p>
   </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Mobile Navbar Toggle
+    function toggleMenu() {
+      document.getElementById('navbarMenu').classList.toggle('active');
+    }
+    // Collapsible Sections (Accordions)
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+    // Simple Image Slider
+    const slides = document.querySelector('.slides');
+    const slideImages = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    let currentIndex = 0;
+    function showSlide(index) {
+      if(index < 0) {
+        currentIndex = slideImages.length - 1;
+      } else if(index >= slideImages.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+      slides.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
+    }
+    prevBtn.addEventListener('click', function() {
+      showSlide(currentIndex - 1);
+    });
+    nextBtn.addEventListener('click', function() {
+      showSlide(currentIndex + 1);
+    });
+    // Dark Mode Toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  </script>
+  <!-- FontAwesome for Icons (if needed) -->
+  <script src="https://kit.fontawesome.com/63c99c920d.js" crossorigin="anonymous"></script>
 </body>
 </html>
