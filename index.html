@@ -11,11 +11,7 @@
   <!-- Google Fonts for professional typography -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* CSS Variables */
-    /* 
-      CSS Variables for Light and Dark Modes
-      Light mode (default) and dark mode (via body.dark-mode)
-    */
+    /* CSS Variables for Light and Dark Modes */
     :root {
       --primary-color: #2c3e50;
       --secondary-color: #2980b9;
@@ -38,7 +34,7 @@
       --shadow-color: rgba(0, 0, 0, 0.5);
       --nav-bg: rgba(30, 30, 30, 0.95);
     }
-
+    
     /* Global Styles & Resets */
     * {
       margin: 0;
@@ -66,14 +62,12 @@
       max-width: 100%;
       display: block;
     }
+    
     /* Navbar */
-
-    /* Navigation Bar */
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--primary-color);
       background-color: var(--nav-bg);
       color: #fff;
       box-shadow: 0 2px 4px var(--shadow-color);
@@ -121,7 +115,6 @@
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: var(--primary-color);
         background-color: var(--nav-bg);
         position: absolute;
         top: 60px;
@@ -130,16 +123,12 @@
       .navbar-menu.active {
         display: flex;
       }
-      .navbar-icons {
-        display: block;
-      }
       .navbar-toggle {
         display: block;
       }
     }
-    /* Main Container */
-
-    /* Hero Section with Background Image & Overlay */
+    
+    /* Hero Section */
     .hero {
       position: relative;
       height: 60vh;
@@ -168,8 +157,8 @@
     .hero-content p {
       font-size: 1.2em;
     }
-
-    /* Main Layout Using CSS Grid */
+    
+    /* Two-Column Layout for Main Content */
     .container {
       max-width: 1200px;
       margin: 100px auto 50px;
@@ -178,22 +167,7 @@
       grid-template-columns: 1fr 2fr;
       gap: 20px;
     }
-    /* Left Column */
-    .left-column {
-      flex: 1 1 30%;
-      background-color: var(--light-bg);
-      padding: 20px;
-      border-radius: 8px;
-    }
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-    }
-    /* Right Column */
-    .right-column {
-      flex: 1 1 65%;
-    }
+    
     /* Sidebar (Left Column) */
     .sidebar {
       background-color: var(--card-bg);
@@ -201,34 +175,28 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px var(--shadow-color);
     }
-    /* Profile Image */
-    .profile-img {
-      /* (No additional styles specified) */
-    }
-    .sidebar img {
+    .sidebar img.profile-img {
       border-radius: 8px;
       margin-bottom: 20px;
     }
-    /* Section Titles */
-    .section-title {
-      font-size: 22px;
-      color: var(--primary-color);
-    }
-    .sidebar h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      border-bottom: 2px solid var(--secondary-color);
-      padding-bottom: 5px;
-    }
-    /* Card Styles */
     .card {
       background-color: #fff;
       border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      font-size: 22px;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 5px;
     }
     .sidebar p {
       font-size: 0.95em;
       margin-bottom: 10px;
     }
+    
     /* Main Content (Right Column) */
     .main-content {
       background-color: var(--card-bg);
@@ -240,7 +208,6 @@
     .profile {
       margin-bottom: 30px;
     }
-    /* Collapsible Sections */
     .profile h2 {
       margin-bottom: 15px;
       border-bottom: 2px solid var(--secondary-color);
@@ -250,8 +217,8 @@
       margin-bottom: 15px;
       text-align: justify;
     }
-
-    /* Collapsible Sections for Work, News, and CV */
+    
+    /* Collapsible Sections */
     .collapsible {
       background-color: transparent;
       color: var(--primary-color);
@@ -291,19 +258,19 @@
     .content p {
       padding: 10px 0;
     }
-
+    
     /* Slider Styles */
-
-    /* Image Slider */
     .slider {
       position: relative;
       overflow: hidden;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      margin: 20px auto;
+      max-width: 1200px;
     }
     .slides {
       display: flex;
+      transition: transform 0.3s ease;
     }
     .navigation button {
       position: absolute;
@@ -319,7 +286,7 @@
     .navigation button:hover {
       background-color: rgba(0,0,0,0.8);
     }
-
+    
     /* Tweets Section */
     .tweet-container {
       display: grid;
@@ -328,17 +295,11 @@
       margin-top: 20px;
     }
     .tweet-box {
-      flex: 1 1 calc(50% - 20px);
       border: 1px solid var(--shadow-color);
       border-radius: 8px;
       padding: 15px;
       background-color: var(--card-bg);
       box-shadow: 0 2px 5px var(--shadow-color);
-    }
-    @media (max-width: 600px) {
-      .tweet-box {
-        flex: 1 1 100%;
-      }
     }
     .tweet-box blockquote {
       margin: 0;
@@ -350,7 +311,7 @@
       font-size: 0.9em;
       margin-top: 10px;
     }
-
+    
     /* Contact Section */
     #contact {
       padding: 40px 20px;
@@ -390,7 +351,7 @@
     .contact_form button:hover {
       background-color: #0056b3;
     }
-
+    
     /* Footer */
     .footer {
       background-color: var(--primary-color);
@@ -402,7 +363,6 @@
 </head>
 <body>
   <!-- Navbar -->
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">Anuvab Sen</div>
@@ -424,70 +384,37 @@
     </div>
   </nav>
   
-  <!-- Main Container -->
-  <div class="container" id="home">
-    <!-- Left Column -->
-    <div class="left-column">
-      <img src="image/AS.jpg" alt="Profile Picture" class="profile-img">
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Anuvab Sen</h1>
+      <p>Academic Portfolio & Researcher</p>
+    </div>
+  </section>
+  
+  <!-- Main Content Area -->
+  <div class="container">
+    <!-- Sidebar (Left Column) -->
+    <aside class="sidebar">
+      <img src="image/AS.jpg" alt="Profile Picture" class="profile-img" loading="lazy">
       <div class="card">
-        <h2 class="section-title">News</h2>
+        <h2 class="section-title">Latest News</h2>
         <p><strong>Google Research Week '24:</strong> Selected participant</p>
         <hr>
         <p><strong>IEEE GRSS Travel Grant:</strong> Award Recipient</p>
       </div>
       <div class="card">
         <h2 class="section-title">Other Roles</h2>
-        <p><strong>IEEE, CIS Committee Member</strong><br>
-           Jan 2024 - Present</p>
+        <p><strong>IEEE CIS Committee Member</strong><br>Jan 2024 - Present</p>
         <hr>
-        <p><strong>Co-Lead, Google Developer Club</strong><br>
-           Sep 2022 - Feb 2024</p>
+        <p><strong>Co-Lead, Google Developer Club</strong><br>Sep 2022 - Feb 2024</p>
         <hr>
-        <p><strong>Chairperson, IEEE CIS IIEST</strong><br>
-           Jan 2020 - Dec 2020</p>
+        <p><strong>Chairperson, IEEE CIS IIEST</strong><br>Jan 2020 - Dec 2020</p>
         <hr>
-        <p><strong>Reviewer, IEEE ICLR Committee</strong><br>
-           Oct 2024 - Present</p>
+        <p><strong>Reviewer, IEEE ICLR Committee</strong><br>Oct 2024 - Present</p>
       </div>
-    </div>
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <h1>Anuvab Sen</h1>
-        <p>Academic Portfolio & Researcher</p>
-      </div>
-      <!-- Right Column -->
-      <div class="right-column">
-        <div class="card" id="about">
-          <h2 class="section-title">About Me</h2>
-          <p>I am a first-year PhD student at Georgia Institute of Technology, Atlanta, USA, in the College of Electrical and Computer Engineering. My research interests include artificial intelligence and energy-efficient design, with a focus on building smart, energy-efficient models under tight resource constraints.</p>
-          <p>I graduated with a B.Tech in Electronics and Telecommunication from IIEST Shibpur in 2024. As an undergraduate, I engaged in diverse research experiences and received prestigious awards—including the Mitacs Globalink Research Scholarship, IEEE GRSS Travel Grant, and IEEE CIS travel grants.</p>
-          <p>I worked with Prof. Subhamoy Maitra at the Indian Statistical Institute on NMR Quantum Computing and quantum algorithm optimization, and collaborated with Dr. Subhabrata Roy for my undergraduate thesis on attention mechanisms in medical diagnosis and quantum machine learning.</p>
-        </div>
-      </div>
-    </section>
-  </div>
-  
-  <!-- Main Content Area -->
-  <div class="container">
-    <!-- Sidebar (Left Column) -->
-    <aside class="sidebar">
-      <img src="image/AS.jpg" alt="Profile Picture" loading="lazy">
-      <h2>Latest News</h2>
-      <p><strong>Google Research Week '24:</strong> Selected participant</p>
-      <hr>
-      <p><strong>IEEE GRSS Travel Grant:</strong> Award Recipient</p>
-      <hr>
-      <h2>Other Roles</h2>
-      <p><strong>IEEE CIS Committee Member</strong><br>Jan 2024 - Present</p>
-      <hr>
-      <p><strong>Co-Lead, Google Developer Club</strong><br>Sep 2022 - Feb 2024</p>
-      <hr>
-      <p><strong>Chairperson, IEEE CIS IIEST</strong><br>Jan 2020 - Dec 2020</p>
-      <hr>
-      <p><strong>Reviewer, IEEE ICLR Committee</strong><br>Oct 2024 - Present</p>
     </aside>
-
+    
     <!-- Main Content (Right Column) -->
     <main class="main-content">
       <!-- About Me Section -->
@@ -498,8 +425,8 @@
         <p>Under the guidance of Prof. Subhamoy Maitra at the Indian Statistical Institute, I explored NMR Quantum Computing and quantum algorithm optimization, and collaborated with Dr. Subhabrata Roy on attention mechanisms for medical diagnosis and quantum machine learning.</p>
       </div>
       
-      <button class="collapsible"><i class="fa fa-suitcase"></i> Work Experience</button>
       <!-- Work Experience Section -->
+      <button class="collapsible"><i class="fa fa-suitcase"></i> Work Experience</button>
       <div class="content">
         <div class="card">
           <div class="profile">
@@ -528,28 +455,12 @@
         </div>
       </div>
       
-      <button class="collapsible"><i class="fa fa-envelope"></i> Latest News</button>
-      <!-- Latest News Section -->
-      <div class="content">
-        <div class="card">
-          <p><strong>[Aug 2024]</strong> I started my PhD at Georgia Institute of Technology, Atlanta, USA!</p>
-          <p><strong>[Jul 2024]</strong> Completed my graduation at IIEST Shibpur, India!</p>
-          <p><strong>[Jan 2024]</strong> Undergraduate thesis accepted as a workshop paper at IGARSS, Athens, Greece!</p>
-        </div>
-        <div class="profile">
-          <p><strong>[Aug 2024]</strong> Started my PhD at Georgia Tech, Atlanta, USA.</p>
-          <p><strong>[Jul 2024]</strong> Graduated from IIEST Shibpur, India.</p>
-          <p><strong>[Jan 2024]</strong> Undergraduate thesis accepted as a workshop paper at IGARSS, Athens, Greece.</p>
-        </div>
-      </div>
-      
-      <button class="collapsible"><i class="fa fa-file"></i> CV</button>
       <!-- CV Section -->
+      <button class="collapsible"><i class="fa fa-file"></i> CV</button>
       <div class="content" id="cv">
         <div class="card">
           <h2 class="section-title">Conference Papers</h2>
           <div class="profile">
-            <h2>Conference Papers</h2>
             <p>ExoSpikeNet: A Light Curve Analysis Based Spiking Neural Network for Exoplanet Detection, CSNT, pp.802-807</p>
             <p>QGAPHnet: Quantum Genetic Algorithm Based Hybrid QLSTM Model for Soil Moisture Estimation, IGARSS 2024</p>
             <p>HBO-DEViT: Vision Transformer Based Attention-Guided Evolutionary Architecture for Ship-Iceberg Categorisation, IGARSS 2024</p>
@@ -565,47 +476,44 @@
         <div class="card">
           <h2 class="section-title">Journal Papers</h2>
           <div class="profile">
-            <h2>Journal Papers</h2>
             <p>Comparative Evaluation of Evolutionary Metaheuristic Algorithms for Hyper-parameter Selection in Short-Term Weather Forecasting, Springer Nature Studies in Computational Intelligence</p>
             <p>Benchmarking Metaheuristic Integrated Quantum Approximate Optimization Algorithm against Quantum Annealing, 11th CSAI Conference, London, QIP</p>
           </div>
         </div>
       </div>
-      
-      <!-- Slider Section -->
-      <!-- Image Slider Section -->
-      <div class="slider">
-        <div class="slides">
-          <div class="slide"><img src="image/1.jpg" alt="Image 1"></div>
-          <div class="slide"><img src="image/iiest.jpg" alt="Image 2"></div>
-          <div class="slide"><img src="image/3.jpg" alt="Image 3"></div>
-          <div class="slide"><img src="image/1.jpg" alt="Slide 1"></div>
-          <div class="slide"><img src="image/iiest.jpg" alt="Slide 2"></div>
-          <div class="slide"><img src="image/3.jpg" alt="Slide 3"></div>
-        </div>
-        <div class="navigation">
-          <button id="prev">&#10094;</button>
-          <button id="next">&#10095;</button>
-        </div>
-      </div>
-      
-      <!-- Tweets Section -->
-      <div class="tweet-container">
-        <div class="tweet-box">
-          <blockquote>
-            <p>Love this weather! Perfect day for a walk.</p>
-            <cite>— Anuvab Sen, July 8, 2023</cite>
-          </blockquote>
-        </div>
-        <div class="tweet-box">
-          <blockquote>
-            <p>Niagara Falls on a Saturday is all I crave for😁</p>
-            <p>Niagara Falls on a Saturday is all I crave for 😁</p>
-            <cite>— Anuvab Sen, July 8, 2023</cite>
-          </blockquote>
-        </div>
-      </div>
     </main>
+  </div>
+  
+  <!-- Slider Section -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide"><img src="image/1.jpg" alt="Image 1"></div>
+      <div class="slide"><img src="image/iiest.jpg" alt="Image 2"></div>
+      <div class="slide"><img src="image/3.jpg" alt="Image 3"></div>
+      <div class="slide"><img src="image/1.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="image/iiest.jpg" alt="Slide 2"></div>
+      <div class="slide"><img src="image/3.jpg" alt="Slide 3"></div>
+    </div>
+    <div class="navigation">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+  
+  <!-- Tweets Section -->
+  <div class="tweet-container">
+    <div class="tweet-box">
+      <blockquote>
+        <p>Love this weather! Perfect day for a walk.</p>
+        <cite>— Anuvab Sen, July 8, 2023</cite>
+      </blockquote>
+    </div>
+    <div class="tweet-box">
+      <blockquote>
+        <p>Niagara Falls on a Saturday is all I crave for 😁</p>
+        <cite>— Anuvab Sen, July 8, 2023</cite>
+      </blockquote>
+    </div>
   </div>
   
   <!-- Contact Section -->
@@ -663,7 +571,6 @@
     }
     
     // Slider functionality
-    // Simple Image Slider
     const slides = document.querySelector('.slides');
     const slideImages = document.querySelectorAll('.slide');
     const prevBtn = document.getElementById('prev');
@@ -688,6 +595,7 @@
     nextBtn.addEventListener('click', function() {
       showSlide(currentIndex + 1);
     });
+    
     // Dark Mode Toggle
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
